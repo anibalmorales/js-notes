@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fffffe;
+    transition: .5s ease all;
+    overflow-x:hidden;
+   
+}
+
+.navClass {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navClass .fab{
+    margin: 30px 50px;
+    font-size: 32px;
+    color: rgba(255,207,27,1);
+}
+
+
+.heroClass {
+    margin-left: 90px;
+    width: 50vw;
+}
+
+.heroClassTitle {
+    margin-top: 20px;
+    color: #272343;
+    font-size: 80px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.heroClassDescription {
+    color: #272343;
+    font-size: 24px;
+    margin: 15px 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn {
+    background: #FC6681;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+}
+
+.image {
+    position: absolute;
+    right: 30px;
+    top: 130px;
+}
+
+.image img {
+    height: 400px;
+    width: auto;
+}
+
+.image-night{
+    background-image: url('undraw_moonlight_5ksn.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 720px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    display: none;
+    transition: background-image 2s;
+    transform: scaleX(-1);
+    filter: FlipH;
+}
+
+
+
+.footerClass {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background: #FC6681;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    color: #fffffe;
+}
+
+
+.switch {
+    background-color: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+.switch.active{
+    background: #ffd803;
+    color: #000;
+}
+
+
+.active::after {
+    right:0;
+    left: unset;
+}
+
+body.dark{
+    background: #2E2D42;
+}
+
+body.dark .fab{
+    color: #eebbc3;
+}
+
+body.dark h1 {
+        color: #fffffe;
+}
+
+body.dark .btn {
+    background: #eebbc3;
+    color: #232946;
+}
+
+
+body.dark .heroClassDescription {
+    color:#b8c1ec;
+
+}
+
+body.dark footer{
+    background: #eebbc3;
+    color: #232946;
+}
+
+body.dark .image img{
+    display: none;
+}
+
+body.dark .image-night{
+    display:block;
+    transition: image 2s ease all;
+}
+
+body.dark a:visited{
+    color:#232946;
+}
+
+
+span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+
+a:visited{
+    color: white;
+}
+
+
+
+
+
+@media screen and (max-width:370px) {
+
+ body{
+     overflow-x: hidden;
+ }   
+.navClass {
+        display: flex;
+        justify-content: center;
+}
+
+
+.navClass .fab{
+    margin: 30px 25px;
+    font-size: 32px;
+    color: rgba(255,207,27,1);
+}
+
+.heroClass {
+    margin-left: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+.heroClassTitle {
+    font-size: 46px;
+}
+
+.heroClassDescription {
+    margin:20px;
+    font-size: 16px;
+
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.image {
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+
+
+.image img {
+   width: 250px;
+    height: auto;
+    text-align: center;
+}
+
+.footerClass {
+    position: static;
+    background: #FC6681;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #fffffe;
+    font-size: 11px;
+    width: 100%;
+    padding: 10px 0px;
+    bottom: 0;
+}
+
+.switch{
+    margin-left: 30px;
+}
+
+.image-night{
+    width: 100vw;
+    height: 150px;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+
+body.dark .image-night{
+    display:block;
+    transition: image 2s ease all;
+}
+}
+@media screen and (max-width:380px) {
+
+    .image-night{
+        width: 100vw;
+        height: 180px;
+        position: relative;
+        right: 0;
+        bottom: 0;
+        display: none;
+    }  
+
+    .footerClass {
+        background: #FC6681;
+        text-align: center;
+        font-family: 'Nunito', sans-serif;
+        color: #fffffe;
+        font-size: 11px;
+        width: 100%;
+        padding: 10px 0;
+        bottom: 0;
+        position: relative;
+    }
+    
+
+}
+@media screen and (max-width:420px) {
+
+    body{
+        overflow-x: hidden;
+    }   
+   .navClass {
+           display: flex;
+           justify-content: center;
+   }
+   
+   
+   .navClass .fab{
+       margin: 30px 25px;
+       font-size: 32px;
+       color: rgba(255,207,27,1);
+   }
+   
+   .heroClass {
+       margin-left: 0;
+       width: 100vw;
+       text-align: center;
+   }
+   
+   .heroClassTitle {
+       font-size: 46px;
+   }
+   
+   .heroClassDescription {
+       margin:20px;
+       font-size: 16px;
+   
+   }
+   
+   .btn {
+       padding: 10px 20px;
+       font-size: 14px;
+       margin: 20px 0;
+   }
+   
+   .image {
+       position: static;
+       right: 0;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       margin: auto;
+       text-align: center;
+   }
+   
+   
+   .image img {
+      width: 300px;
+       height: auto;
+       text-align: center;
+   }
+   
+   .footerClass {
+       background: #FC6681;
+       text-align: center;
+       font-family: 'Nunito', sans-serif;
+       color: #fffffe;
+       font-size: 11px;
+       width: 100%;
+       padding: 15px 0;
+       bottom: 0;
+   }
+   
+   .switch{
+       margin-left: 30px;
+   }
+   
+   .image-night{
+       width: 100vw;
+       height: 200px;
+       right: 0;
+       display: none;
+   }
+   
+   
+   body.dark .image-night{
+       display:block;
+       transition: image 2s ease all;
+   }
+   }
